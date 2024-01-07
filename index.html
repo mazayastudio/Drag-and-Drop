@@ -1,15 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drag and Drop</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="main-title">Kanban Board</h1>
-    <!-- Script -->
-    <script src="script.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Drag and Drop</title>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1 class="main-title">Kanban Board</h1>
+		<div class="drag-container">
+			<ul class="drag-list">
+				<!-- Backlog Column -->
+				<li class="drag-column backlog-column">
+					<span class="header">
+						<h1>Backlog</h1>
+					</span>
+					<!-- Backlog Content -->
+					<div id="backlog-content" class="custom-scroll">
+						<ul class="drag-item-list" id="backlog-list">
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi debitis assumenda veniam eligendi itaque
+								laborum rerum voluptatibus dolores nisi voluptate atque cupiditate quas placeat sed vitae deserunt
+								nihil, repellat quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem provident neque enim
+								iure reprehenderit, non nam quo eos quasi eius perferendis a unde tempore ea, laudantium earum tenetur
+								perspiciatis totam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio in consequuntur
+								modi aut fugiat ipsa aliquam, nulla itaque et fugit. Adipisci, est numquam repellendus explicabo labore
+								odio impedit doloribus ea? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi voluptatum
+								quia, sit quam tempora consequuntur officiis quod. Iusto possimus, atque sint at omnis minus mollitia
+								soluta, tenetur reiciendis deserunt nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Doloribus aut odit qui beatae illum cumque soluta dolor, sequi nesciunt quidem aliquam adipisci,
+								repellendus fugit perferendis earum blanditiis voluptatem labore magnam. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Ad suscipit enim architecto praesentium fugit hic, nemo consequuntur
+								dolore et perferendis earum obcaecati dolorum voluptatibus, unde provident iure veritatis harum vel!
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias necessitatibus eaque animi sapiente
+								perspiciatis, at libero doloribus excepturi minus officiis vel natus, optio dolorum. Recusandae officia
+								qui vero unde illum?
+							</li>
+						</ul>
+					</div>
+					<!-- Add Button Group -->
+					<div class="add-btn-group">
+						<div class="add-btn">
+							<span class="plus-sign">+</span>
+							<span>Add Item</span>
+						</div>
+						<div class="add-btn solid">
+							<span>Save Item</span>
+						</div>
+						<div class="add-container">
+							<div class="add-item"></div>
+						</div>
+					</div>
+				</li>
+				<!-- Progress Column -->
+				<li class="drag-column progress-column">
+					<span class="header">
+						<h1>Progress</h1>
+					</span>
+					<!-- Progress Content -->
+					<div id="progress-content" class="custom-scroll">
+						<ul class="drag-item-list" id="progress-list">
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi debitis assumenda veniam eligendi itaque
+								laborum rerum voluptatibus dolores nisi voluptate atque cupiditate quas placeat sed vitae deserunt
+								nihil, repellat quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem provident neque enim
+								iure reprehenderit, non nam quo eos quasi eius perferendis a unde tempore ea, laudantium earum tenetur
+								perspiciatis totam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio in consequuntur
+								modi aut fugiat ipsa aliquam, nulla itaque et fugit. Adipisci, est numquam repellendus explicabo labore
+								odio impedit doloribus ea? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi voluptatum
+								quia, sit quam tempora consequuntur officiis quod. Iusto possimus, atque sint at omnis minus mollitia
+								soluta, tenetur reiciendis deserunt nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Doloribus aut odit qui beatae illum cumque soluta dolor, sequi nesciunt quidem aliquam adipisci,
+								repellendus fugit perferendis earum blanditiis voluptatem labore magnam. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Ad suscipit enim architecto praesentium fugit hic, nemo consequuntur
+								dolore et perferendis earum obcaecati dolorum voluptatibus, unde provident iure veritatis harum vel!
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias necessitatibus eaque animi sapiente
+								perspiciatis, at libero doloribus excepturi minus officiis vel natus, optio dolorum. Recusandae officia
+								qui vero unde illum?
+							</li>
+						</ul>
+					</div>
+					<!-- Add Button Group -->
+					<div class="add-btn-group">
+						<div class="add-btn">
+							<span class="plus-sign">+</span>
+							<span>Add Item</span>
+						</div>
+						<div class="add-btn solid">
+							<span>Save Item</span>
+						</div>
+						<div class="add-container">
+							<div class="add-item"></div>
+						</div>
+					</div>
+				</li>
+				<!-- Complete Column -->
+				<li class="drag-column complete-column">
+					<span class="header">
+						<h1>Complete</h1>
+					</span>
+					<!-- complete Content -->
+					<div id="complete-content" class="custom-scroll">
+						<ul class="drag-item-list" id="complete-list">
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi debitis assumenda veniam eligendi itaque
+								laborum rerum voluptatibus dolores nisi voluptate atque cupiditate quas placeat sed vitae deserunt
+								nihil, repellat quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem provident neque enim
+								iure reprehenderit, non nam quo eos quasi eius perferendis a unde tempore ea, laudantium earum tenetur
+								perspiciatis totam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio in consequuntur
+								modi aut fugiat ipsa aliquam, nulla itaque et fugit. Adipisci, est numquam repellendus explicabo labore
+								odio impedit doloribus ea? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi voluptatum
+								quia, sit quam tempora consequuntur officiis quod. Iusto possimus, atque sint at omnis minus mollitia
+								soluta, tenetur reiciendis deserunt nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Doloribus aut odit qui beatae illum cumque soluta dolor, sequi nesciunt quidem aliquam adipisci,
+								repellendus fugit perferendis earum blanditiis voluptatem labore magnam. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Ad suscipit enim architecto praesentium fugit hic, nemo consequuntur
+								dolore et perferendis earum obcaecati dolorum voluptatibus, unde provident iure veritatis harum vel!
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias necessitatibus eaque animi sapiente
+								perspiciatis, at libero doloribus excepturi minus officiis vel natus, optio dolorum. Recusandae officia
+								qui vero unde illum?
+							</li>
+						</ul>
+					</div>
+					<!-- Add Button Group -->
+					<div class="add-btn-group">
+						<div class="add-btn">
+							<span class="plus-sign">+</span>
+							<span>Add Item</span>
+						</div>
+						<div class="add-btn solid">
+							<span>Save Item</span>
+						</div>
+						<div class="add-container">
+							<div class="add-item"></div>
+						</div>
+					</div>
+				</li>
+				<!-- On Hold Column -->
+				<li class="drag-column on-hold-column">
+					<span class="header">
+						<h1>On Hold</h1>
+					</span>
+					<!-- on-hold Content -->
+					<div id="on-hold-content" class="custom-scroll">
+						<ul class="drag-item-list" id="on-hold-list">
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">Testing</li>
+							<li class="drag-item">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi debitis assumenda veniam eligendi itaque
+								laborum rerum voluptatibus dolores nisi voluptate atque cupiditate quas placeat sed vitae deserunt
+								nihil, repellat quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem provident neque enim
+								iure reprehenderit, non nam quo eos quasi eius perferendis a unde tempore ea, laudantium earum tenetur
+								perspiciatis totam! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio in consequuntur
+								modi aut fugiat ipsa aliquam, nulla itaque et fugit. Adipisci, est numquam repellendus explicabo labore
+								odio impedit doloribus ea? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi voluptatum
+								quia, sit quam tempora consequuntur officiis quod. Iusto possimus, atque sint at omnis minus mollitia
+								soluta, tenetur reiciendis deserunt nulla? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Doloribus aut odit qui beatae illum cumque soluta dolor, sequi nesciunt quidem aliquam adipisci,
+								repellendus fugit perferendis earum blanditiis voluptatem labore magnam. Lorem ipsum dolor sit amet
+								consectetur adipisicing elit. Ad suscipit enim architecto praesentium fugit hic, nemo consequuntur
+								dolore et perferendis earum obcaecati dolorum voluptatibus, unde provident iure veritatis harum vel!
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias necessitatibus eaque animi sapiente
+								perspiciatis, at libero doloribus excepturi minus officiis vel natus, optio dolorum. Recusandae officia
+								qui vero unde illum?
+							</li>
+						</ul>
+					</div>
+					<!-- Add Button Group -->
+					<div class="add-btn-group">
+						<div class="add-btn">
+							<span class="plus-sign">+</span>
+							<span>Add Item</span>
+						</div>
+						<div class="add-btn solid">
+							<span>Save Item</span>
+						</div>
+						<div class="add-container">
+							<div class="add-item"></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- Script -->
+		<script src="script.js"></script>
+	</body>
 </html>
